@@ -25,6 +25,12 @@ LOCAL_SRC_FILES := \
 LOCAL_SRC_FILES += \
 	jmemnobs.c
 
+LOCAL_CFLAGS := -fvisibility=hidden
+
+LOCAL_CFLAGS += -DAVOID_TABLES 
+LOCAL_CFLAGS += -O3 -fstrict-aliasing -fprefetch-loop-arrays
+LOCAL_CFLAGS += -march=armv6j
+
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
 
 include $(BUILD_STATIC_LIBRARY)
