@@ -20,10 +20,10 @@ LOCAL_SRC_FILES := \
 	jfdctint.c jidctflt.c jidctfst.c jidctint.c jquant1.c \
 	jquant2.c jutils.c jmemmgr.c jcarith.c jdarith.c jaricom.c
 
-# Use the no backing store memory manager provided by
-# libjpeg. See install.txt
+# Use the memory manager used by Android's platform build
+# uses sdcard as libjpeg's backing store
 LOCAL_SRC_FILES += \
-	jmemnobs.c
+	jmem-android.c
 
 LOCAL_EXPORT_C_INCLUDES := $(LOCAL_PATH)
 
