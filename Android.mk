@@ -6,9 +6,7 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := cocos_jpeg_static
-
-LOCAL_MODULE_FILENAME := libjpeg
+LOCAL_MODULE := jpeg
 
 LOCAL_SRC_FILES := \
 	jcapimin.c jcapistd.c jccoefct.c jccolor.c jcdctmgr.c jchuff.c \
